@@ -14,6 +14,11 @@
 		1571A52E2CABB2CB00F0396A /* NamazTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1571A52D2CABB2CB00F0396A /* NamazTimeTests.swift */; };
 		1571A5382CABB2CB00F0396A /* NamazTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1571A5372CABB2CB00F0396A /* NamazTimeUITests.swift */; };
 		1571A53A2CABB2CB00F0396A /* NamazTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1571A5392CABB2CB00F0396A /* NamazTimeUITestsLaunchTests.swift */; };
+		1571A54D2CABB31D00F0396A /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1571A54C2CABB31D00F0396A /* Arc.swift */; };
+		1571A54F2CABB75F00F0396A /* Ticks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1571A54E2CABB75F00F0396A /* Ticks.swift */; };
+		1571A5512CABB90F00F0396A /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1571A5502CABB90F00F0396A /* ClockView.swift */; };
+		15EBD86A2CABEA9D00438E9C /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBD8692CABEA8800438E9C /* Number.swift */; };
+		15EBD86C2CABF66F00438E9C /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBD86B2CABF65300438E9C /* Hand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		1571A5332CABB2CB00F0396A /* NamazTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NamazTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1571A5372CABB2CB00F0396A /* NamazTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazTimeUITests.swift; sourceTree = "<group>"; };
 		1571A5392CABB2CB00F0396A /* NamazTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamazTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1571A54C2CABB31D00F0396A /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
+		1571A54E2CABB75F00F0396A /* Ticks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticks.swift; sourceTree = "<group>"; };
+		1571A5502CABB90F00F0396A /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		15EBD8692CABEA8800438E9C /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		15EBD86B2CABF65300438E9C /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,8 @@
 		1571A51B2CABB2C000F0396A /* NamazTime */ = {
 			isa = PBXGroup;
 			children = (
+				1571A5472CABB2DA00F0396A /* Shape */,
+				1571A5462CABB2D300F0396A /* Views */,
 				1571A51C2CABB2C000F0396A /* NamazTimeApp.swift */,
 				1571A51E2CABB2C000F0396A /* ContentView.swift */,
 				1571A5202CABB2CA00F0396A /* Assets.xcassets */,
@@ -125,6 +137,25 @@
 				1571A5392CABB2CB00F0396A /* NamazTimeUITestsLaunchTests.swift */,
 			);
 			path = NamazTimeUITests;
+			sourceTree = "<group>";
+		};
+		1571A5462CABB2D300F0396A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15EBD8692CABEA8800438E9C /* Number.swift */,
+				1571A5502CABB90F00F0396A /* ClockView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1571A5472CABB2DA00F0396A /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				15EBD86B2CABF65300438E9C /* Hand.swift */,
+				1571A54C2CABB31D00F0396A /* Arc.swift */,
+				1571A54E2CABB75F00F0396A /* Ticks.swift */,
+			);
+			path = Shape;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1571A54F2CABB75F00F0396A /* Ticks.swift in Sources */,
+				1571A5512CABB90F00F0396A /* ClockView.swift in Sources */,
+				15EBD86A2CABEA9D00438E9C /* Number.swift in Sources */,
 				1571A51F2CABB2C000F0396A /* ContentView.swift in Sources */,
+				15EBD86C2CABF66F00438E9C /* Hand.swift in Sources */,
 				1571A51D2CABB2C000F0396A /* NamazTimeApp.swift in Sources */,
+				1571A54D2CABB31D00F0396A /* Arc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
