@@ -13,13 +13,18 @@ struct Hand: Shape {
         var path = Path()
         
         path.addRoundedRect(
-            in: CGRect(origin: CGPoint(x: rect.origin.x, y: rect.origin.y + offset), size: CGSize(width: rect.width, height: rect.height / 2 - offset)),
-            cornerSize: CGSize(width: rect.width / 2, height: rect.height / 2))
+            in: CGRect(
+                origin: CGPoint(x: rect.origin.x, y: rect.origin.y + offset), 
+                size: CGSize(width: rect.width, height: rect.height/2 - offset)),
+            cornerSize: CGSize(
+                width: rect.width / 2,
+                height: rect.height / 2))
         
         return path
     }
     
 }
+
 
 #Preview {
     Hand(offset: 10)

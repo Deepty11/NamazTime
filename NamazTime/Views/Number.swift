@@ -12,11 +12,11 @@ struct Number: View {
     var body: some View {
         VStack {
             Text(hour % 3 == 0 ? "\(hour)" : "") // showing only 4 numbers on the clock
-                .font(.callout)
+                .font(.caption)
                 .rotationEffect(.radians(Double.pi * 2/12 * Double(hour)))
             Spacer()
         }
-        .padding()
+//        .padding()
         .rotationEffect(.radians(-Double.pi * 2/12 * Double(hour)))
         
     }
