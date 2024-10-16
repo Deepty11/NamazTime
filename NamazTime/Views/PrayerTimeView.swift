@@ -36,7 +36,7 @@ struct Card<Content: View>: View {
             content
         }
         .padding(5)
-        .background(Color.gray.gradient, in: .rect(cornerRadius: 10))
+        .background(Color.gray.opacity(0.2).gradient, in: .rect(cornerRadius: 10))
     }
     
 }

@@ -24,7 +24,8 @@ struct PrayerTimeRow: View {
                 HStack {
                     ScheduleTimeView(time: prayerTime.startAt, scheduleType:  .startsAt)
                     Rectangle()
-                        .frame(width: 1, height: 50)
+                        .fill(Color.gray)
+                        .frame(width: 1, height: 40)
                     ScheduleTimeView(time: prayerTime.jamatAt, scheduleType:  .jamatAt)
                 }
             }

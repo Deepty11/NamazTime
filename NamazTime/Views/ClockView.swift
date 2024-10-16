@@ -18,39 +18,24 @@ struct ClockView: View {
         ZStack {
             Arc()
                 .fill(Color.white)
-                .stroke(Color.black, lineWidth: 2)
+                .stroke(Color.gray, lineWidth: 1)
             Ticks()
             Numbers()
 
+            clockHand(offset: 5, angle: minuteAngle, handType: .minute)
+            clockHand(offset: 15, angle: hourAngle, handType: .hour)
+
             Arc()
-                .stroke(lineWidth: 4)
+                .stroke(Color.black, lineWidth: 4)
                 .frame(width: 10, height: 10, alignment: .center)
-
-            Arc()
-                .stroke(lineWidth: 4)
-                .frame(width: 5, height: 5, alignment: .center)
-
-            // Minute Hand
-            Hand(offset: 5)
-                .fill(Color.gray)
-                .stroke(Color.black, lineWidth: 1)
-                .frame(width: 4, alignment: .center)
-                .rotationEffect(.radians(minuteAngle))
-
-            // Hour Hand
-            Hand(offset: 10)
-                .fill(Color.red)
-                .stroke(Color.black, lineWidth: 1)
-                .frame(width: 4, alignment: .center)
-                .rotationEffect(.radians(hourAngle))
 
             Circle()
-                .foregroundStyle(.black)
-                .frame(width: 10, height: 10, alignment: .center)
+                .foregroundStyle(Color.white)
+                .frame(width: 5, height: 5, alignment: .center)
         }
         .onAppear {
             time = DateUtil().convertToTime(from: timeString)
-            
+
             let dateComponent = Calendar.current.dateComponents([.hour, .minute], from: time ?? Date())
 
             if let hour = dateComponent.hour, let minute = dateComponent.minute {
@@ -58,18 +43,32 @@ struct ClockView: View {
                 print(minute)
                 let radianInHour = 2 * Double.pi / 12
                 let radianInMinute = 2 * Double.pi / 60
-                
+
                 let actualHour = Double(hour) + Double(minute/60)
-                
+
                 minuteAngle = Double(minute) * radianInMinute
                 hourAngle = actualHour * radianInHour
             }
             
         }
-        //.frame(width: 70, height: 70, alignment: .center)
+    }
+    
+    func clockHand(offset: Double, angle: Double, handType: HandType) -> some View {
+        Hand(offset: offset)
+            .fill(handType == .hour
+                  ? Color.black
+                  : Color(red: 0.7, green: 0.7, blue: 0.7))
+            .stroke(Color.black, lineWidth: 0.6)
+            .frame(width: 4, alignment: .center)
+            .rotationEffect(.radians(angle))
     }
 }
 
 #Preview {
     ClockView(timeString: "4:31 AM")
+}
+
+enum HandType {
+    case hour
+    case minute
 }
