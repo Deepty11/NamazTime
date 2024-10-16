@@ -18,8 +18,10 @@ struct ScheduleTimeView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "hourglass")
+            HStack(spacing: 4) {
+                Image(systemName: scheduleType == .startsAt
+                      ? "hourglass"
+                      : "play.circle")
                 Text(time)
             }
             Text(scheduleType.rawValue)

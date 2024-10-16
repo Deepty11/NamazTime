@@ -8,9 +8,15 @@
 import Foundation
 
 class DateUtil {
-//    func getHour(from date: Date) {
-//        let dateComponent = Calendar.current.dateComponents([.hour, .minute], from: <#T##Date#>)
-//        
-//        
-//    }
+
+    var dateFormatter = DateFormatter()
+    var format = "hh:mm a"
+    
+    func convertToTime(from timeString: String) -> Date? {
+        dateFormatter.dateFormat = format
+        dateFormatter.locale = .current
+        return dateFormatter.date(from: timeString)
+    }
+    
+    
 }

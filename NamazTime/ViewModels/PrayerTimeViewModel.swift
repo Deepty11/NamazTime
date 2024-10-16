@@ -20,9 +20,7 @@ class PrayerTimeViewModel {
         return dateComponent.minute ?? 12
     }
 
-    
-//    func getHour() {
-//        let hour = Calendar.current.dateComponents([.hour, .minute], from: date)
-//        
-//    }
+    var prayerData: [PrayerTime] {
+        prayerTimeData
+    }
 }

@@ -20,6 +20,8 @@ struct Hand: Shape {
                 width: rect.width / 2,
                 height: rect.height / 2))
         
+        
+        
         return path
     }
     

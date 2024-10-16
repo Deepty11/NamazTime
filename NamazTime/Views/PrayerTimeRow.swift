@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct PrayerTimeRow: View {
+    var prayerTime: PrayerTime
+
     var body: some View {
         HStack(spacing: 18) {
-            PrayerTimeView()
-                .frame(width: 80, height: 80)
+            Card {
+                ClockView(timeString: prayerTime.startAt)
+                    .frame(width: 70, height: 70)
+            }
             
             VStack(alignment: .leading, spacing: 2) {
-                Text("Fazr")
-                    .font(.system(.title))
+                Text(prayerTime.name)
+                    .font(.system(.title3))
                     .fontWeight(.bold)
                 HStack {
-                    ScheduleTimeView(time: "4:35 AM", scheduleType:  .startsAt)
+                    ScheduleTimeView(time: prayerTime.startAt, scheduleType:  .startsAt)
                     Rectangle()
                         .frame(width: 1, height: 50)
-                    ScheduleTimeView(time: "5:10 AM", scheduleType:  .jamatAt)
+                    ScheduleTimeView(time: prayerTime.jamatAt, scheduleType:  .jamatAt)
                 }
             }
         }
@@ -30,5 +34,5 @@ struct PrayerTimeRow: View {
 }
 
 #Preview {
-    PrayerTimeRow()
+    PrayerTimeRow(prayerTime: prayerTimeData[0])
 }

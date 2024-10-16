@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct PrayerTimeView: View {
+    var prayerTimeViewModel = PrayerTimeViewModel()
+
     var body: some View {
-        Card {
-            ClockView(hourAngle: 4, minuteAngle: 8)
+        NavigationStack {
+            List {
+                ForEach(prayerTimeViewModel.prayerData, id: \.name) { prayer in
+                    PrayerTimeRow(prayerTime: prayer)
+                    
+                }
+                
+            }
+            .navigationTitle("Today's Prayers")
+            .navigationBarTitleDisplayMode(.large)
+            
         }
         
+       
     }
 }
 
@@ -23,8 +35,8 @@ struct Card<Content: View>: View {
         VStack {
             content
         }
-        .padding(10)
-        .background(Color.gray, in: .rect(cornerRadius: 10))
+        .padding(5)
+        .background(Color.gray.gradient, in: .rect(cornerRadius: 10))
     }
     
 }

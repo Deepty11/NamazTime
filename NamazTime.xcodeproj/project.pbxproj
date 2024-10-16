@@ -19,6 +19,7 @@
 		1571A5512CABB90F00F0396A /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1571A5502CABB90F00F0396A /* ClockView.swift */; };
 		15EBD86A2CABEA9D00438E9C /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBD8692CABEA8800438E9C /* Number.swift */; };
 		15EBD86C2CABF66F00438E9C /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBD86B2CABF65300438E9C /* Hand.swift */; };
+		FA5E932D2CBF6F0200FD87FD /* PrayerTimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E932C2CBF6F0200FD87FD /* PrayerTimeData.swift */; };
 		FA6D3DEB2CBE392600F5CEF9 /* PrayerTimeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D3DEA2CBE392600F5CEF9 /* PrayerTimeRow.swift */; };
 		FA6D3DED2CBE3BA400F5CEF9 /* ScheduleTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D3DEC2CBE3BA400F5CEF9 /* ScheduleTimeView.swift */; };
 		FAD12B2A2CB678B60072FAEA /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD12B292CB678B60072FAEA /* DateUtil.swift */; };
@@ -59,6 +60,7 @@
 		1571A5502CABB90F00F0396A /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		15EBD8692CABEA8800438E9C /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		15EBD86B2CABF65300438E9C /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		FA5E932C2CBF6F0200FD87FD /* PrayerTimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeData.swift; sourceTree = "<group>"; };
 		FA6D3DEA2CBE392600F5CEF9 /* PrayerTimeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeRow.swift; sourceTree = "<group>"; };
 		FA6D3DEC2CBE3BA400F5CEF9 /* ScheduleTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTimeView.swift; sourceTree = "<group>"; };
 		FAD12B292CB678B60072FAEA /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
@@ -114,6 +116,8 @@
 		1571A51B2CABB2C000F0396A /* NamazTime */ = {
 			isa = PBXGroup;
 			children = (
+				FA5E932E2CBF771500FD87FD /* New Group */,
+				FA5E932B2CBF6E4300FD87FD /* Data */,
 				FAD12B2D2CB67BD40072FAEA /* ViewModels */,
 				FAD12B282CB678A60072FAEA /* Utils */,
 				1571A5472CABB2DA00F0396A /* Shape */,
@@ -171,6 +175,21 @@
 				1571A54E2CABB75F00F0396A /* Ticks.swift */,
 			);
 			path = Shape;
+			sourceTree = "<group>";
+		};
+		FA5E932B2CBF6E4300FD87FD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E932C2CBF6F0200FD87FD /* PrayerTimeData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FA5E932E2CBF771500FD87FD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		FAD12B282CB678A60072FAEA /* Utils */ = {
@@ -323,6 +342,7 @@
 				1571A54F2CABB75F00F0396A /* Ticks.swift in Sources */,
 				1571A5512CABB90F00F0396A /* ClockView.swift in Sources */,
 				FAD12B2F2CB67BF80072FAEA /* PrayerTimeViewModel.swift in Sources */,
+				FA5E932D2CBF6F0200FD87FD /* PrayerTimeData.swift in Sources */,
 				15EBD86A2CABEA9D00438E9C /* Number.swift in Sources */,
 				1571A51F2CABB2C000F0396A /* ContentView.swift in Sources */,
 				15EBD86C2CABF66F00438E9C /* Hand.swift in Sources */,
