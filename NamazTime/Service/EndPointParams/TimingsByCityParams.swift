@@ -7,15 +7,14 @@
 
 import Foundation
 struct TimingsByCityParams {
-    var date: Date?
+    var date: String?
     var city: String?
     var country: String?
     var urlParams: [String: AnyObject]? {
         var dict = [String: AnyObject]()
 
-        dict["date"] = date as AnyObject
-        dict["country"] = city as AnyObject
-        dict["city"] = country as AnyObject
+        dict["country"] = country as AnyObject
+        dict["city"] = city as AnyObject
 
         return dict
     }

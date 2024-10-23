@@ -11,7 +11,7 @@ struct Ticks: View {
     var body: some View {
         ForEach(0..<60) { minute in
             Tick(isLong: minute % 5 == 0 ? true : false)
-                .stroke(lineWidth: 1)
+                .stroke(Color.gray, lineWidth: 1)
                 .rotationEffect(.radians(Double.pi * 2/60 * Double(minute)))
         }
     }

@@ -26,9 +26,12 @@
 		FA5E93392CBFC34000FD87FD /* PrayerTimeEndPointService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E93382CBFC34000FD87FD /* PrayerTimeEndPointService.swift */; };
 		FA6D3DEB2CBE392600F5CEF9 /* PrayerTimeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D3DEA2CBE392600F5CEF9 /* PrayerTimeRow.swift */; };
 		FA6D3DED2CBE3BA400F5CEF9 /* ScheduleTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D3DEC2CBE3BA400F5CEF9 /* ScheduleTimeView.swift */; };
+		FA7EB01C2CC0D81A009A4A51 /* URLResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB01B2CC0D81A009A4A51 /* URLResolver.swift */; };
+		FA7EB01F2CC0F627009A4A51 /* DailyPrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EB01E2CC0F627009A4A51 /* DailyPrayerTime.swift */; };
 		FAD12B2A2CB678B60072FAEA /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD12B292CB678B60072FAEA /* DateUtil.swift */; };
 		FAD12B2C2CB67B4E0072FAEA /* PrayerTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD12B2B2CB67B4E0072FAEA /* PrayerTimeView.swift */; };
 		FAD12B2F2CB67BF80072FAEA /* PrayerTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD12B2E2CB67BF80072FAEA /* PrayerTimeViewModel.swift */; };
+		FAF78E912CC8F87900F8E7FF /* SunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF78E902CC8F87900F8E7FF /* SunView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,9 +74,12 @@
 		FA5E93382CBFC34000FD87FD /* PrayerTimeEndPointService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeEndPointService.swift; sourceTree = "<group>"; };
 		FA6D3DEA2CBE392600F5CEF9 /* PrayerTimeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeRow.swift; sourceTree = "<group>"; };
 		FA6D3DEC2CBE3BA400F5CEF9 /* ScheduleTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTimeView.swift; sourceTree = "<group>"; };
+		FA7EB01B2CC0D81A009A4A51 /* URLResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResolver.swift; sourceTree = "<group>"; };
+		FA7EB01E2CC0F627009A4A51 /* DailyPrayerTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPrayerTime.swift; sourceTree = "<group>"; };
 		FAD12B292CB678B60072FAEA /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		FAD12B2B2CB67B4E0072FAEA /* PrayerTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeView.swift; sourceTree = "<group>"; };
 		FAD12B2E2CB67BF80072FAEA /* PrayerTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeViewModel.swift; sourceTree = "<group>"; };
+		FAF78E902CC8F87900F8E7FF /* SunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,8 @@
 		1571A51B2CABB2C000F0396A /* NamazTime */ = {
 			isa = PBXGroup;
 			children = (
+				FA7EB01D2CC0F546009A4A51 /* models */,
+				FA7EB01A2CC0D806009A4A51 /* Network */,
 				FA5E932F2CBFAFED00FD87FD /* Service */,
 				FA5E932E2CBF771500FD87FD /* New Group */,
 				FA5E932B2CBF6E4300FD87FD /* Data */,
@@ -172,6 +180,7 @@
 				FAD12B2B2CB67B4E0072FAEA /* PrayerTimeView.swift */,
 				FA6D3DEA2CBE392600F5CEF9 /* PrayerTimeRow.swift */,
 				FA6D3DEC2CBE3BA400F5CEF9 /* ScheduleTimeView.swift */,
+				FAF78E902CC8F87900F8E7FF /* SunView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,6 +235,22 @@
 				FA5E93362CBFC2A200FD87FD /* TimingsByCityParams.swift */,
 			);
 			path = EndPointParams;
+			sourceTree = "<group>";
+		};
+		FA7EB01A2CC0D806009A4A51 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA7EB01B2CC0D81A009A4A51 /* URLResolver.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA7EB01D2CC0F546009A4A51 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				FA7EB01E2CC0F627009A4A51 /* DailyPrayerTime.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		FAD12B282CB678A60072FAEA /* Utils */ = {
@@ -377,6 +402,7 @@
 				FA6D3DED2CBE3BA400F5CEF9 /* ScheduleTimeView.swift in Sources */,
 				1571A54F2CABB75F00F0396A /* Ticks.swift in Sources */,
 				FA5E93312CBFB00900FD87FD /* PrayerTimeEndPoint.swift in Sources */,
+				FA7EB01F2CC0F627009A4A51 /* DailyPrayerTime.swift in Sources */,
 				FA5E93392CBFC34000FD87FD /* PrayerTimeEndPointService.swift in Sources */,
 				1571A5512CABB90F00F0396A /* ClockView.swift in Sources */,
 				FA5E93332CBFC1EF00FD87FD /* Endpoint.swift in Sources */,
@@ -386,11 +412,13 @@
 				15EBD86A2CABEA9D00438E9C /* Number.swift in Sources */,
 				1571A51F2CABB2C000F0396A /* ContentView.swift in Sources */,
 				15EBD86C2CABF66F00438E9C /* Hand.swift in Sources */,
+				FAF78E912CC8F87900F8E7FF /* SunView.swift in Sources */,
 				FAD12B2A2CB678B60072FAEA /* DateUtil.swift in Sources */,
 				1571A51D2CABB2C000F0396A /* NamazTimeApp.swift in Sources */,
 				FA6D3DEB2CBE392600F5CEF9 /* PrayerTimeRow.swift in Sources */,
 				1571A54D2CABB31D00F0396A /* Arc.swift in Sources */,
 				FAD12B2C2CB67B4E0072FAEA /* PrayerTimeView.swift in Sources */,
+				FA7EB01C2CC0D81A009A4A51 /* URLResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

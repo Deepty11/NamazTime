@@ -8,29 +8,29 @@
 import SwiftUI
 
 struct PrayerTimeView: View {
-    var prayerTimeViewModel = PrayerTimeViewModel()
+    @StateObject var viewModel = PrayerTimeViewModel()
 
     var body: some View {
         NavigationStack {
             List {
-                ForEach(prayerTimeViewModel.prayerData, id: \.name) { prayer in
+                ForEach(prayerTimeData, id: \.name) { prayer in
                     PrayerTimeRow(prayerTime: prayer)
-                    
                 }
-                
             }
             .navigationTitle("Today's Prayers")
             .navigationBarTitleDisplayMode(.large)
-            
+            .onAppear {
+                Task {
+                    await viewModel.retrieveDailyPrayerData()
+                }
+            }
         }
-        
-       
     }
 }
 
 struct Card<Content: View>: View {
     @ViewBuilder var content: Content
-    
+
     var body: some View {
         VStack {
             content

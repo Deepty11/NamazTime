@@ -5,10 +5,12 @@
 //  Created by Rehnuma Reza(Deepty) on 9/10/24.
 //
 
-import Foundation
+import SwiftUI
 
-class PrayerTimeViewModel {
+class PrayerTimeViewModel: ObservableObject {
     var date: Date!
+    let service = PrayerTimeEndPointService()
+    @Published var dailyPrayerTime: DailyPrayerTime!
     
     var hour: Int {
         let dateComponent = Calendar.current.dateComponents([.hour, .minute], from: date)
@@ -20,7 +22,22 @@ class PrayerTimeViewModel {
         return dateComponent.minute ?? 12
     }
 
-    var prayerData: [PrayerTime] {
-        prayerTimeData
+    var timings: Timings? {
+        dailyPrayerTime?.data.timings
     }
+    
+    var today: String? {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-YYYY"
+        return dateFormatter.string(from: date)
+    }
+    
+    func retrieveDailyPrayerData() async {
+        await service.getDailyPrayerInformation(params: TimingsByCityParams(date: today, city: "Dhaka", country: "Bangladesh")) {[weak self] prayerTime in
+            self?.dailyPrayerTime = prayerTime
+        }
+    }
+    
+    
 }

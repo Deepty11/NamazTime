@@ -28,7 +28,7 @@ extension PrayerTimeEndPoint: EndPoint {
     
     var placeHolder: [String : Any]? {
         switch self {
-            case .timingsByCity(let params): ["formId" : params.date]
+            case .timingsByCity(let params): ["date" : params.date ?? Date.now]
         }
     }
 
