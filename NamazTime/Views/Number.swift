@@ -16,7 +16,7 @@ struct Number: View {
                 .rotationEffect(.radians(-Double.pi * 2/12 * Double(hour)))
             Spacer()
         }
-        .padding()
+        //.padding()
         .rotationEffect(.radians(Double.pi * 2/12 * Double(hour)))
         
     }
